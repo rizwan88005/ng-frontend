@@ -1,0 +1,23 @@
+<form  #reportForm="ngForm"   style="border:1px solid #ccc">
+    <div class="container">
+      <h1>GENERATE REPORT</h1>
+      <hr>
+  
+      <label for="reportType"> Select report type</label>
+      <select class="selected" ngModel id="reportType" name="reportType" #mySelect
+      (change)='onOptionsSelected(mySelect.value)'  [(ngModel)]="selected">
+        <option value="LOCATION" >Location</option>
+        <option value="EMPLOYER">Employer</option>
+        <option value="CATEGORY">Category</option>
+        <option value="TECHNOLOGY">Technology</option>
+      </select><br>
+
+<hr>
+      <input type="text" #valueChange  (change)='changeValue(valueChange.value)' placeholder={{valueType}} name="value" id="value" required>
+  
+      <div class="clearfix">
+        <button type="submit" (click)="generateReport()" class="signupbtn" value="GENERATE">GENERATE</button>
+      </div>
+    </div>
+  </form>
+  

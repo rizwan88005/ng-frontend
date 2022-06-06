@@ -1,0 +1,25 @@
+
+<table>
+    <caption>Users</caption>
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Active</th>
+        <th scope="col">Activate/Deactivate</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let emp of users">
+        <td data-label="Account" #empid >{{emp.id}}</td>
+        <td data-label="Due Date">{{emp.name}}</td>
+        <td data-label="Amount">{{emp.email}}</td>
+        <td data-label="Amount">{{emp.active}}</td>
+        <td data-label="Period"><a > 
+            <div class="act" #act21 *ngIf=" emp.active" (click)="activateDeactivate(emp.id, 'Deactivate')">Deactivate</div>
+            <div class="act2" #act22 *ngIf="! emp.active"  (click)="activateDeactivate(emp.id, 'Activate')">Activate</div>
+            </a></td>
+      </tr>
+    </tbody>
+  </table>

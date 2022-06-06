@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <!-- <link rel="stylesheet" href="style.css" /> -->
+   <title>Document</title>
+ </head>
+ <body>
+   <nav class="navbar">
+     <!-- LOGO -->
+     <div class="logo">JOB PORTAL</div>
+      <ul *ngIf="matchrole('ADMIN')">
+     <li class="services">
+      <a style="color: white;">ADMIN PANEL</a>
+      <!-- DROPDOWN MENU -->
+      <ul class="dropdown">
+        <li><a routerLink="/reports">Reports </a></li>
+        <li><a routerLink="/employers">Employers</a></li>
+        <li><a routerLink="/users">Users</a></li>
+      </ul>
+    </li>
+  </ul> 
+    
+     <!-- <div class="panel">EMPLOYER PANEL</div> -->
+     <!-- NAVIGATION MENU -->
+     <ul class="nav-links">
+       <!-- USING CHECKBOX HACK -->
+       <input type="checkbox" id="checkbox_toggle" />
+       <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+       <!-- NAVIGATION MENUS -->
+       <div class="menu">
+         <li><a *ngIf="! isLoggedIn()" routerLink="/signin">sign in</a></li>
+         <li><a *ngIf="isLoggedIn()" (click)="logout()">sign out</a></li>
+       </div>
+     </ul>
+   </nav>
+ </body>
+ <router-outlet></router-outlet>
+</html>

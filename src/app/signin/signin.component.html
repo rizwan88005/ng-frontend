@@ -1,0 +1,17 @@
+<form  #loginForm="ngForm" (ngSubmit)="signin(loginForm)"   style="border:1px solid #ccc">
+    <div class="container">
+      <h1>Sign In</h1>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input ngModel  type="text" placeholder="Enter Email" name="email" id="email"   required>
+  
+      <label for="password"><b>Password</b></label>
+      <input ngModel type="password" placeholder="Enter Password" name="password" id="password" required>
+  
+      <div class="clearfix">
+        <button type="submit" class="signupbtn" value="signin">Sign In</button>
+      </div>
+    </div>
+  </form>
+  

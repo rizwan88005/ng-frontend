@@ -1,0 +1,59 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    transition: 1s ease-in-out;
+  }
+  #homepage {
+    height: 100vh;
+    width: 100vw;
+    color: whitesmoke;
+    background-color: black;
+    font-family: arabic-indic;
+  }
+  #hidden-nav:hover ~ nav {
+    background-color: white;
+    color: black;
+  }
+  #hidden-nav:hover ~ h2 {
+    background-color: white;
+    color: black;
+  }
+  #hidden-nav:hover {
+    background-color: white;
+  }
+  #a:hover ~ h2 {
+    background-color: lime;
+  }
+  h2 {
+    height: 85vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+    color: white;
+    border: 0px;
+  }
+  nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+  }
+  #a,
+  #b,
+  #c,
+  #d {
+    height: 10vh;
+    width: 25vw;
+    display: grid;
+    place-items: center;
+  }
+  
+  #hidden-nav {
+    height: 5vh;
+    width: 100vw;
+    background-color: transparent;
+    color: black;
+    font-size: 10px;
+    display: grid;
+    place-content: center;
+  }
+  
